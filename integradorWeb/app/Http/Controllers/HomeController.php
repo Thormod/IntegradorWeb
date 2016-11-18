@@ -12,6 +12,8 @@ class HomeController extends Controller
      *
      * @return void
      */
+
+     /*
     public function __construct()
     {
         $this->middleware('auth');
@@ -26,5 +28,10 @@ class HomeController extends Controller
     {
         $blogs = Blog::orderBy('created_at', 'desc')->get();;
         return view('home', ['blogs' => $blogs]);
+    }
+    public function index2()
+    {
+        $blogs = Blog::orderBy('created_at', 'desc')->get();;
+        return view('layouts.all', ['blogs' => $blogs]);
     }
 }

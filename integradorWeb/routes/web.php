@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/posts', 'HomeController@index2');
 Route::get('/create', 'BlogController@index');
 Route::group(['middleware' => ['web']], function(){
   Route::resource('blog', 'BlogController');
